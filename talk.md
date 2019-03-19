@@ -1,9 +1,9 @@
 <script type="text/javascript"
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-# introduction
+# introduction to Python
 
-## Olav Vahtras
+## BB1000
 
 KTH
 
@@ -11,13 +11,3 @@ KTH
 
 layout: false
 
-## Slide
-
-- Hi
-- Ho
-
----
-
-## Slide
-
-- Write me
