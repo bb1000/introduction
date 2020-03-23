@@ -484,10 +484,15 @@ module imported by other programs
 ### Summary
 
 * Basic syntax - indentation
-* Basic built in variable types
+* Basic built-in types
 * Scalar and container types
+* Variables
 * Functions
 * Modules
+
+---
+
+## Resources
 
 ### Standard documentation
 * https://docs.python.org/3
@@ -498,6 +503,9 @@ module imported by other programs
 * Jake van der Plas: <a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Data Science Handbook</a>
 * Al Sweigart: <a href="https://automatetheboringstuff.com">Automate the Boring Stuff with Python</a>
 
-### On-line tutorials
+### Online tutorials
 * https://docs.python.org/3/tutorial/
 * https://realpython.com
+
+### Youtube
+* Variables in Python https://www.youtube.com/watch?v=_AEJHKGk9ns
