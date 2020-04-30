@@ -8,15 +8,34 @@
 KTH
 
 ---
-
 layout: false
 
-# Python Basics
+# Contents
+* [Running](#3)
+  + [Interactively](#3)
+  + [Creating Python scripts](#4)
+* [Python types](#9)
+  + [Numerical](#9)
+  + [String: `str`](#10)
+* [Variables](#11)
+* [Container types](#12)
+  + [Lists](#13)
+  + [Tuples](#14)
+  + [Dictionaries](#15)
+* [Program logic](#16)
+  + [Repetition (iteration, looping)](#16)
+  + [Branching](#17)
+* [Program units](#18)
+  + [Functions](#18)
+  + [Modules](#19)
+* [Summary](#24)
+* [Reference](#25)
 
+---
 
-## Running
+# Running
 
-### Interactively
+## Interactively
 
 * `python` without arguments starts up  the Python interpreter 
 * The interpreter reads lines one by one in the Python programming language and executes them
@@ -102,13 +121,14 @@ $ jupyter notebook
 
 ---
 
-## Some Python types
+
+# Python types
 
 Values in Python have a type
 A type determines the range of possible values and operations that can be
 performed
 
-###  Numerical
+##  Numerical
 
 * whole numbers (`int`): e.g. `-1, 7, 2000`
 * decimal numbers (`float`): `3.14, 1.0 -7.25`
@@ -117,23 +137,25 @@ performed
 
 ---
 
-###  String: `str`
+##  String: `str`
 
 - sequence of characters
 - literal strings are written within quotation marks
 - single `'` and double `"` quotation marks have the same status
 - three quotation marks limit strings that can span several lines
-
+- there is no single character type
 
 ~~~
 >>> print("It's time")
 It's time
+
 ~~~
 
 
 ~~~
 >>> print('Our boss is "nice". 😀')
 Our boss is "nice". 😀
+
 ~~~
 
 ~~~
@@ -141,11 +163,12 @@ Our boss is "nice". 😀
 ... world""")
 Hello
 world
+
 ~~~
 
 ---
 
-## Variables
+# Variables
 
 * To save the value of an object it is assigned to a *variable*
 * The assignment operator is `=`
@@ -157,6 +180,7 @@ world
 >>> x = 8*9
 >>> print(x)
 72
+
 ~~~
 
 * Right-side is evaluated
@@ -165,30 +189,33 @@ world
 
 ---
 
-## Container types
+# Container types
 
-* Lists
-* Tuples
-* Dictionaries
+The most important continer types are lists, tuples and dictionaries
 
----
-
-### Lists
+## Lists
 
 * A list is a ordered sequence of elements 
-* Notation: square brackets , comma-separated
-* List can have objects of different types
+* A literal list in code is defined by square brackets and comma-separated
+  elements `[0, 1, 2]`
+* List can have members of different types
 * List members are referenced with `[n]` where `n=0, 1, 2...`
 * A list can be empty, `[]`
 
 ~~~
 >>> colours = ['hearts', 'spades', 'diamonds', 'clubs']
 >>> values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'knight', 'queen', 'king', 'ace']
+>>> colours[0]
+'hearts'
+
 ~~~
+
+*Note that brackets are both used in the notation for a literal list and for
+getting a member from a list*
 
 ---
 
-### Tuples
+## Tuples
 
 * An immutable (unchangeable) sequence of objects
 * Similar to lists
@@ -198,33 +225,40 @@ world
 Handy packing and unpacking
 
 ```
->>> t = 1, 2 #packing
->>> x, y = t #unpacking
->>> x, y
-(1, 2)
->>> x, y = y, x #swapping
->>> x, y
-(2, 1)
-
+>>> t = 1, 2 # packing
+>>> x, y = t # unpacking
+>>> x
+1
+>>> y
+2
+>>> x, y = y, x # swapping (packing and unpacking)
+>>> x
+2
+>>> y
+1
 
 ```
 ---
 
-### Dictionaries
+## Dictionaries
 
-* Sets of key-value pairs
-* The key can be any immutable object
+* The `dict` type define sets of key-value pairs
+* Curly braces with comma-separates pairs define a literal dict
+* Each pair is separated by a colon `:`
+* The key can be any immutable (unchangeable) object
 * Very useful for complex structures
 * Efficient and highly optimized
 
 ```
 empty =  {} # empty dict
-newdict = {'a':1, 'b':2}
+newdict = {'a': 1, 'b': 2}
 ```
 
 ---
 
-### Repetition (iteration, looping)
+# Program logic
+
+## Repetition (iteration, looping)
 
 * The `for ... in` statement is used repeat the same operation for all elements of a
 sequence
@@ -265,7 +299,7 @@ b 2
 
 ---
 
-### Branching (if statements)
+## Branching
 
 Conditional execution of code blocks depending on whether an expression
 evaluates to True or not:
@@ -303,8 +337,9 @@ Empty list
 
 ---
 
+# Program units
 
-### Functions
+## Functions
 
 * Functions are objects that can take some input and return some output.
 Functions are the primary way of grouping code into independent units, that can be tested and reused
@@ -335,7 +370,7 @@ parameter `2`.
 
 ---
 
-### Modules
+## Modules
 
 
 * a file with python source 
@@ -413,6 +448,7 @@ def say_hello():
 >>> message = hello.say_hello()
 >>> print(message)
 Hello world!
+
 ~~~
 
 ---
@@ -481,7 +517,7 @@ module imported by other programs
 
 ---
 
-### Summary
+# Summary
 
 * Basic syntax - indentation
 * Basic built-in types
@@ -492,7 +528,7 @@ module imported by other programs
 
 ---
 
-## Resources
+# Reference
 
 ### Standard documentation
 * https://docs.python.org/3
