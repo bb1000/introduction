@@ -130,6 +130,20 @@
     <script>
         
     </script>
+    <style>
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<link rel="stylesheet" href="/refreeze/js/highlight/styles/gruvbox-light.css">
+<script src="/refreeze/js/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
     <textarea id="source">
 name: inverse
 layout: true
@@ -137,9 +151,9 @@ class: center, middle, inverse
 
 ---
 
-&lt;script type=&#34;text/javascript&#34;
-  src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;
-&lt;/script&gt;
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 # Introduction to Python
 
 ## BB1000
@@ -178,13 +192,13 @@ layout: false
 
 * `python` without arguments starts up  the Python interpreter 
 * The interpreter reads lines one by one in the Python programming language and executes them
-* The interpreter prints prompt `&gt;&gt;&gt;` when it is waiting for input
+* The interpreter prints prompt `>>>` when it is waiting for input
 
 ~~~
 $ python
-&gt;&gt;&gt; print(&#34;Hello world&#34;)
+>>> print("Hello world")
 Hello world
-&gt;&gt;&gt;
+>>>
 ~~~
 
 * A read-evaluate-print-loop (REPL)
@@ -204,12 +218,12 @@ like Microsoft Word). A text editor is good for programming if it automatically
 colors special keywords for the programming language of that file. A simple 
 editor that fulfills this is `nano`.
 
-&lt;img src=&#34;nano.png&#34; height=&#34;250&#34;&gt;
+<img src="nano.png" height="250">
 
 Developers survey on 
-&lt;a href=&#34;https://insights.stackoverflow.com/survey/2018/#development-environments-and-tools&#34;&gt;
+<a href="https://insights.stackoverflow.com/survey/2018/#development-environments-and-tools">
 most popular programming editor
-&lt;/a&gt;: 
+</a>: 
 normally lists editors like vim, emacs, atom, sublime.
 Spending time to learn one well is worth the investment.
 
@@ -224,7 +238,7 @@ $ pip install mu-editor
 $ mu-editor hello.py
 ~~~
 
-&lt;img src=&#34;mu.png&#34; height=&#34;350&#34;&gt;
+<img src="mu.png" height="350">
 
 ---
 
@@ -232,7 +246,7 @@ $ mu-editor hello.py
 
 * Microsoft open source project
 
-&lt;img src=&#34;vsc.png&#34; height=&#34;400&#34;&gt;
+<img src="vsc.png" height="400">
 
 ---
 
@@ -240,7 +254,7 @@ $ mu-editor hello.py
 
 * Community and Professional editions from JetBrains
 
-&lt;img src=&#34;pycharm.png&#34; height=&#34;400&#34;&gt;
+<img src="pycharm.png" height="400">
 
 * see https://www.jetbrains.com/student/
 
@@ -253,7 +267,7 @@ $ mu-editor hello.py
 ~~~
 $ jupyter notebook
 ~~~
-&lt;img src=&#39;jupyter.png&#39; height=&#34;350&#34; &gt;
+<img src='jupyter.png' height="350" >
 * good for exploration/experimentation/demonstration
 * not good for writing large structured programs
 
@@ -280,26 +294,26 @@ performed
 
 - sequence of characters
 - literal strings are written within quotation marks
-- single `&#39;` and double `&#34;` quotation marks have the same status
+- single `'` and double `"` quotation marks have the same status
 - three quotation marks limit strings that can span several lines
 - there is no single character type
 
 ~~~
-&gt;&gt;&gt; print(&#34;It&#39;s time&#34;)
-It&#39;s time
+>>> print("It's time")
+It's time
 
 ~~~
 
 
 ~~~
-&gt;&gt;&gt; print(&#39;Our boss is &#34;nice&#34;. 😀&#39;)
-Our boss is &#34;nice&#34;. 😀
+>>> print('Our boss is "nice". 😀')
+Our boss is "nice". 😀
 
 ~~~
 
 ~~~
-&gt;&gt;&gt; print(&#34;&#34;&#34;Hello
-... world&#34;&#34;&#34;)
+>>> print("""Hello
+... world""")
 Hello
 world
 
@@ -316,8 +330,8 @@ world
 
 ### Example
 ~~~
-&gt;&gt;&gt; x = 8*9
-&gt;&gt;&gt; print(x)
+>>> x = 8*9
+>>> print(x)
 72
 
 ~~~
@@ -342,10 +356,10 @@ The most important continer types are lists, tuples and dictionaries
 * A list can be empty, `[]`
 
 ~~~
-&gt;&gt;&gt; colours = [&#39;hearts&#39;, &#39;spades&#39;, &#39;diamonds&#39;, &#39;clubs&#39;]
-&gt;&gt;&gt; values = [2, 3, 4, 5, 6, 7, 8, 9, 10, &#39;knight&#39;, &#39;queen&#39;, &#39;king&#39;, &#39;ace&#39;]
-&gt;&gt;&gt; colours[0]
-&#39;hearts&#39;
+>>> colours = ['hearts', 'spades', 'diamonds', 'clubs']
+>>> values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'knight', 'queen', 'king', 'ace']
+>>> colours[0]
+'hearts'
 
 ~~~
 
@@ -364,16 +378,16 @@ getting a member from a list*
 Handy packing and unpacking
 
 ```
-&gt;&gt;&gt; t = 1, 2 # packing
-&gt;&gt;&gt; x, y = t # unpacking
-&gt;&gt;&gt; x
+>>> t = 1, 2 # packing
+>>> x, y = t # unpacking
+>>> x
 1
-&gt;&gt;&gt; y
+>>> y
 2
-&gt;&gt;&gt; x, y = y, x # swapping (packing and unpacking)
-&gt;&gt;&gt; x
+>>> x, y = y, x # swapping (packing and unpacking)
+>>> x
 2
-&gt;&gt;&gt; y
+>>> y
 1
 
 ```
@@ -390,7 +404,7 @@ Handy packing and unpacking
 
 ```
 empty =  {} # empty dict
-newdict = {&#39;a&#39;: 1, &#39;b&#39;: 2}
+newdict = {'a': 1, 'b': 2}
 ```
 
 ---
@@ -406,7 +420,7 @@ sequence
 
 
 ```python
-&gt;&gt;&gt; for e in [1, 2, 3]: 
+>>> for e in [1, 2, 3]: 
 ...    print(e)
 1
 2
@@ -415,7 +429,7 @@ sequence
 ```
 
 ```python
-&gt;&gt;&gt; for c in &#39;hello&#39;:
+>>> for c in 'hello':
 ...     print(c)
 h
 e
@@ -428,7 +442,7 @@ o
 
 
 ```python
-&gt;&gt;&gt; for k, v in {&#39;a&#39;: 1, &#39;b&#39;: 2}.items():                                       
+>>> for k, v in {'a': 1, 'b': 2}.items():                                       
 ...    print(k, v)
 a 1
 b 2
@@ -444,20 +458,20 @@ Conditional execution of code blocks depending on whether an expression
 evaluates to True or not:
 
 ```
-&gt;&gt;&gt; if True:
-...     print(&#34;Yes&#34;)
+>>> if True:
+...     print("Yes")
 ... else:
-...     print(&#34;No&#34;)
+...     print("No")
 Yes
 
 ```
 
 ```
-&gt;&gt;&gt; i = j = 0
-&gt;&gt;&gt; if i &gt; j:
-...     print(i, &#34; is larger than &#34;, j)
+>>> i = j = 0
+>>> if i > j:
+...     print(i, " is larger than ", j)
 ... else:
-...     print(i, &#34;is smaller than or equal to&#34;, j)
+...     print(i, "is smaller than or equal to", j)
 0 is smaller than or equal to 0
 
 ```
@@ -466,10 +480,10 @@ Most object types have some truthiness. Empty lists in a logical context
 evaluate to False, non-empty to True
 
 ```
-&gt;&gt;&gt; if []:
-...     print(&#34;Non-empty list&#34;)
+>>> if []:
+...     print("Non-empty list")
 ... else:
-...     print(&#34;Empty list&#34;)
+...     print("Empty list")
 Empty list
 
 ```
@@ -489,7 +503,7 @@ The body of the function is indented with respect to the `def` keyword.
 The last line of a function definition is normally a `return` statement and determines the value of a function call
 
 ```
-&gt;&gt;&gt; def square(x):
+>>> def square(x):
 ...    x2 = x * x
 ...    return x2
 
@@ -498,7 +512,7 @@ The last line of a function definition is normally a `return` statement and dete
 * Functions are called with function name and an actual parameter. 
 
 ```
-&gt;&gt;&gt; square(2)
+>>> square(2)
 4
 
 ```
@@ -544,7 +558,7 @@ infile = sys.argv[1]
 
 ```
     import os
-    os.system(&#39;/bin/date&#39;)
+    os.system('/bin/date')
 ```
 
 
@@ -563,10 +577,10 @@ infile = sys.argv[1]
 Many use the math modules as a desktop calculator
 
     $ python
-    &gt;&gt;&gt; from math import *
-    &gt;&gt;&gt; print(pi/2)
+    >>> from math import *
+    >>> print(pi/2)
     1.5707963267948966
-    &gt;&gt;&gt;
+    >>>
 
 ---
 
@@ -577,15 +591,15 @@ Many use the math modules as a desktop calculator
 ~~~
 #hello.py
 def say_hello():
-    return &#34;Hello world!&#34;
+    return "Hello world!"
 ~~~
 
 * To access the same function in other code, import the module
 
 ~~~
-&gt;&gt;&gt; import hello
-&gt;&gt;&gt; message = hello.say_hello()
-&gt;&gt;&gt; print(message)
+>>> import hello
+>>> message = hello.say_hello()
+>>> print(message)
 Hello world!
 
 ~~~
@@ -639,13 +653,13 @@ def print_mult_table(n):
     for i in range(1, 11):
         print(i * n)
 
-if __name__ == &#34;__main__&#34;:
+if __name__ == "__main__":
     
     import sys
     print_mult_table(int(sys.argv[1]))
 ~~~
 
-* the system variable `__name__` has the value `&#34;__main__&#34;` (double underscores)
+* the system variable `__name__` has the value `"__main__"` (double underscores)
 when the file is executed as a program
 * it has the value equal to the file name when it is imported as a module
 * command-line argments appear in the system variable `sys.argv`, a Python list
@@ -674,9 +688,9 @@ module imported by other programs
 
 ### On-line books
 * Jake van der Plas: 
-&lt;a href=&#34;http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/Index.ipynb&#34;&gt; A Worldwind Tour of Python&lt;/a&gt;
-* Jake van der Plas: &lt;a href=&#34;https://jakevdp.github.io/PythonDataScienceHandbook/&#34;&gt;Data Science Handbook&lt;/a&gt;
-* Al Sweigart: &lt;a href=&#34;https://automatetheboringstuff.com&#34;&gt;Automate the Boring Stuff with Python&lt;/a&gt;
+<a href="http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/Index.ipynb"> A Worldwind Tour of Python</a>
+* Jake van der Plas: <a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Data Science Handbook</a>
+* Al Sweigart: <a href="https://automatetheboringstuff.com">Automate the Boring Stuff with Python</a>
 
 ### Online tutorials
 * https://docs.python.org/3/tutorial/
@@ -693,7 +707,7 @@ module imported by other programs
     <script src="/introduction/refreeze/js/high.js" type="text/javascript"></script>
     <script type="text/javascript">
       var slideshow = remark.create({
-          highlightStyle: 'sunburst',
+          highlightStyle: 'gmd',
           highlightLanguage: 'remark'
         }) ;
     </script>
