@@ -11,6 +11,7 @@ KTH
 layout: false
 
 # Contents
+
 * [Running](#3)
   + [Interactively](#3)
   + [Creating Python scripts](#4)
@@ -19,17 +20,18 @@ layout: false
   + [String: `str`](#10)
 * [Variables](#11)
 * [Container types](#12)
-  + [Lists](#13)
-  + [Tuples](#14)
-  + [Dictionaries](#15)
-* [Program logic](#16)
-  + [Repetition (iteration, looping)](#16)
+  + [Lists](#12)
+  + [Tuples](#13)
+  + [Dictionaries](#14)
+* [Program logic](#15)
+  + [Repetition (iteration, looping)](#15)
   + [Branching](#17)
 * [Program units](#18)
   + [Functions](#18)
-  + [Modules](#19)
-* [Summary](#24)
-* [Reference](#25)
+  + [Modules](#20)
+* [Summary](#26)
+* [Reference](#27)
+
 
 ---
 
