@@ -265,6 +265,7 @@ sequence
 
 * A loop variable will reference the elements of the sequence, one at a time
 
+### Looping over lists
 
 ```python
 >>> for e in [1, 2, 3]: 
@@ -274,6 +275,9 @@ sequence
 3
 
 ```
+---
+
+### Looping over strings
 
 ```python
 >>> for c in 'hello':
@@ -286,11 +290,21 @@ o
 
 ```
 
+### Looping over dictionaries
 
 
 ```python
->>> for k, v in {'a': 1, 'b': 2}.items():                                       
+>>> d = {'a': 1, 'b': 2}
+>>> for k, v in d.items():
 ...    print(k, v)
+a 1
+b 2
+
+```
+
+```python
+>>> for k in d:
+...    print(k, d[k])
 a 1
 b 2
 
@@ -349,12 +363,15 @@ arguments (comma-separated) and a colon.
 The body of the function is indented with respect to the `def` keyword.
 The last line of a function definition is normally a `return` statement and determines the value of a function call
 
+
 ```
 >>> def square(x):
 ...    x2 = x * x
 ...    return x2
 
 ```
+
+---
 
 * Functions are called with function name and an actual parameter. 
 
@@ -391,7 +408,7 @@ Commonly used Python modules
 * system modules
 * needed e.g. for arguments to a script
 * `sys.argv` is a list of string arguments
-* `sys.argv [0]` is the file name
+* `sys.argv[0]` is the file name
 
 ~~~
 import sys
@@ -408,6 +425,7 @@ infile = sys.argv[1]
     os.system('/bin/date')
 ```
 
+---
 
 #### `math`
 
@@ -418,6 +436,7 @@ infile = sys.argv[1]
     import math
     print(math.sin(math.pi/2))
 ```
+
 
 #### Tip
 
@@ -545,3 +564,5 @@ module imported by other programs
 
 ### Youtube
 * Variables in Python https://www.youtube.com/watch?v=_AEJHKGk9ns
+
+
