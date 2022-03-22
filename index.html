@@ -143,6 +143,8 @@
 <script type="text/javascript"
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
 
     <textarea id="source">
 name: inverse
@@ -165,36 +167,94 @@ layout: false
 
 # Contents
 
-* [Running](#3)
-  + [Interactively](#3)
-  + [Creating Python scripts](#4)
-* [Python types](#9)
-  + [Numerical](#9)
-  + [String: `str`](#10)
-* [Variables](#11)
-* [Container types](#12)
-  + [Lists](#12)
-  + [Tuples](#13)
-  + [Dictionaries](#14)
-* [Program logic](#15)
-  + [Repetition (iteration, looping)](#15)
-  + [Branching](#17)
-* [Program units](#18)
-  + [Functions](#18)
-  + [Modules](#20)
-* [Summary](#26)
-* [Reference](#27)
+* [Introduction to Python](#1)
+  + [BB1000](#1)
+* [Contents](#2)
+* [What is Python](#3)
+* [How to run Python](#4)
+  + [Command-line](#4)
+  + [Creating Python scripts](#5)
+* [Python types](#10)
+  + [Numerical](#10)
+  + [String: `str`](#11)
+* [Variables](#12)
+* [Container types](#13)
+  + [Lists](#13)
+  + [Tuples](#14)
+  + [Dictionaries](#15)
+* [Program logic](#16)
+  + [Repetition (iteration, looping)](#16)
+  + [Branching](#18)
+* [Program units](#19)
+  + [Functions](#19)
+  + [Modules](#21)
+* [Summary](#27)
+* [Reference](#28)
 
 
 ---
 
-# Running
+# What is Python
 
-## Interactively
+<a title="Daniel Stroud, CC BY-SA 4.0
+&lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+href="https://commons.wikimedia.org/wiki/File:Guido-portrait-2014.jpg"><img
+width="512" alt="Guido-portrait-2014"
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Guido-portrait-2014.jpg/512px-Guido-portrait-2014.jpg"></a>
 
-* `python` without arguments starts up  the Python interpreter 
-* The interpreter reads lines one by one in the Python programming language and executes them
-* The interpreter prints prompt `>>>` when it is waiting for input
+Python is a scripting language written by Guido van Rossum 
+
+> *My original motivation for creating Python was the perceived need for a higher
+> level language in the Amoeba [Operating Systems] project. I realized that the
+> development of system administration utilities in C was taking too long.
+> Moreover, doing these things in the Bourne shell wouldn’t work for a variety of
+> reasons. … So, there was a need for a language that would bridge the gap
+> between C and the shell.*
+
+---
+
+# Who uses Python
+
+From small scripts to large applications
+<div class="row">
+<div class="col-md-6">
+<code class="hljs">
+print("Hello world!")
+</code>
+ 
+</div>
+<div class="col-md-6">
+ <img src="https://www.appsess.com/wp-content/uploads/2016/07/instagram-logo-150x150.png">
+ <img src="https://www.appsess.com/wp-content/uploads/2017/08/youtube-logo-150x150.png">
+</div>
+ 
+</div>
+
+# How to run Python
+
+## Command-line
+
+Many Python programs are run from the computer's command-line interface (CLI). 
+In the CLI you type commands that the computer interprets and acts upon.
+
+* The CLI on a mac/linux is a terminal program that reads commands in the bash
+scripting language (or equivalent)
+* The CLI on windows is the console program known as CMD.
+* The CLI prompt is a character string printed at the beginning of each line when 
+  waiting for a command
+
+In these slides we use the convention
+
+`$ `  is the bash prompt (mac/linux)
+
+`C> ` is the CMD prompt (windows)
+
+Typing `python` in the CLI starts an interactive Python session accepting
+Python commands 
+
+`>>> ` is the Python prompt
+
+* The Python interpreter reads lines one by one in the Python programming language and executes them
 
 ~~~
 $ python

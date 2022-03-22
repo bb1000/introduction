@@ -4,7 +4,7 @@ import flask
 import random
 
 root = '/home/olav/Courses/bb1000/slides/introduction'
-app = flask.Flask(__name__, static_folder=root, template_folder=root)
+app = flask.Flask(__name__, static_folder=root, static_url_path='/introduction', template_folder=root)
 
 
 @app.route('/')
