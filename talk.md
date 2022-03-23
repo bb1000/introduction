@@ -44,7 +44,7 @@ layout: false
 <a title="Daniel Stroud, CC BY-SA 4.0
 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
 href="https://commons.wikimedia.org/wiki/File:Guido-portrait-2014.jpg"><img
-width="512" alt="Guido-portrait-2014"
+width="256" alt="Guido-portrait-2014"
 src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Guido-portrait-2014.jpg/512px-Guido-portrait-2014.jpg"></a>
 
 Python is a scripting language written by Guido van Rossum 
