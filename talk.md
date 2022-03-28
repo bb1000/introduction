@@ -10,7 +10,7 @@ KTH
 ---
 layout: false
 
-# Contents
+## Contents
 
 * [Introduction to Python](#1)
   + [BB1000](#1)
@@ -39,7 +39,7 @@ layout: false
 
 ---
 
-# What is Python
+## What is Python
 
 <a title="Daniel Stroud, CC BY-SA 4.0
 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
@@ -58,7 +58,7 @@ Python is a scripting language written by Guido van Rossum
 
 ---
 
-# Who uses Python
+## Who uses Python
 
 From small scripts to large applications
 <div class="row">
@@ -75,9 +75,9 @@ print("Hello world!")
  
 </div>
 
-# How to run Python
+## How to run Python
 
-## Command-line
+### Command-line
 
 Many Python programs are run from the computer's command-line interface (CLI). 
 In the CLI you type commands that the computer interprets and acts upon.
@@ -182,13 +182,13 @@ $ jupyter notebook
 ---
 
 
-# Python types
+## Python types
 
 Values in Python have a type
 A type determines the range of possible values and operations that can be
 performed
 
-##  Numerical
+###  Numerical
 
 * whole numbers (`int`): e.g. `-1, 7, 2000`
 * decimal numbers (`float`): `3.14, 1.0 -7.25`
@@ -197,7 +197,7 @@ performed
 
 ---
 
-##  String: `str`
+###  String: `str`
 
 - sequence of characters
 - literal strings are written within quotation marks
@@ -228,7 +228,7 @@ world
 
 ---
 
-# Variables
+## Variables
 
 * To save the value of an object it is assigned to a *variable*
 * The assignment operator is `=`
@@ -249,11 +249,11 @@ world
 
 ---
 
-# Container types
+## Container types
 
 The most important continer types are lists, tuples and dictionaries
 
-## Lists
+### Lists
 
 * A list is a ordered sequence of elements 
 * A literal list in code is defined by square brackets and comma-separated
@@ -275,7 +275,7 @@ getting a member from a list*
 
 ---
 
-## Tuples
+### Tuples
 
 * An immutable (unchangeable) sequence of objects
 * Similar to lists
@@ -300,7 +300,7 @@ Handy packing and unpacking
 ```
 ---
 
-## Dictionaries
+### Dictionaries
 
 * The `dict` type define sets of key-value pairs
 * Curly braces with comma-separates pairs define a literal dict
@@ -316,9 +316,9 @@ newdict = {'a': 1, 'b': 2}
 
 ---
 
-# Program logic
+## Program logic
 
-## Repetition (iteration, looping)
+### Repetition (iteration, looping)
 
 * The `for ... in` statement is used repeat the same operation for all elements of a
 sequence
@@ -411,9 +411,9 @@ Empty list
 
 ---
 
-# Program units
+## Program units
 
-## Functions
+### Functions
 
 * Functions are objects that can take some input and return some output.
 Functions are the primary way of grouping code into independent units, that can be tested and reused
@@ -447,7 +447,7 @@ parameter `2`.
 
 ---
 
-## Modules
+### Modules
 
 
 * a file with python source 
@@ -596,7 +596,7 @@ module imported by other programs
 
 ---
 
-# Summary
+## Summary
 
 * Basic syntax - indentation
 * Basic built-in types
@@ -607,7 +607,7 @@ module imported by other programs
 
 ---
 
-# Reference
+## Reference
 
 ### Standard documentation
 * https://docs.python.org/3
