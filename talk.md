@@ -10,35 +10,6 @@ KTH
 ---
 layout: false
 
-## Contents
-
-* [Introduction to Python](#1)
-  + [BB1000](#1)
-* [Contents](#2)
-* [What is Python](#3)
-* [How to run Python](#4)
-  + [Command-line](#4)
-  + [Creating Python scripts](#5)
-* [Python types](#10)
-  + [Numerical](#10)
-  + [String: `str`](#11)
-* [Variables](#12)
-* [Container types](#13)
-  + [Lists](#13)
-  + [Tuples](#14)
-  + [Dictionaries](#15)
-* [Program logic](#16)
-  + [Repetition (iteration, looping)](#16)
-  + [Branching](#18)
-* [Program units](#19)
-  + [Functions](#19)
-  + [Modules](#21)
-* [Summary](#27)
-* [Reference](#28)
-
-
----
-
 ## What is Python
 
 <a title="Daniel Stroud, CC BY-SA 4.0
