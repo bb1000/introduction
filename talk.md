@@ -46,6 +46,8 @@ print("Hello world!")
  
 </div>
 
+---
+
 ## How to run Python
 
 ### Command-line
@@ -61,17 +63,23 @@ scripting language (or equivalent)
 
 In these slides we use the convention
 
-`$ `  is the bash prompt (mac/linux)
-
-`C> ` is the CMD prompt (windows)
+* `$ `  is the bash prompt (mac/linux)
+* `C> ` is the CMD prompt (windows)
 
 Typing `python` in the CLI starts an interactive Python session accepting
 Python commands 
 
-`>>> ` is the Python prompt
+* `>>> ` is the Python prompt
 
-* The Python interpreter reads lines one by one in the Python programming language and executes them
+---
 
+
+* The Python interactive shell is also known as the REPL (read-evaluate-print-loop)
+    - R read a Python expression
+    - E evaluate the expression
+    - P print the value of the expressions to the screen
+    - L loop (start over)
+    
 ~~~
 $ python
 >>> print("Hello world")
@@ -79,11 +87,37 @@ Hello world
 >>>
 ~~~
 
-* A read-evaluate-print-loop (REPL)
-    - reads a Python expression
-    - evaluates the expression
-    - prints the value to the screen
-    - starting over (loop)
+* Use case: a desktop calculator
+
+~~~
+$ python
+>>> 10 + 10*0.25
+12.5
+>>> _  * 2
+25.0
+
+~~~
+
+* in this context the underscore `_` means the value of the previous expression
+
+---
+
+### Running Python scripts
+
+Assuming you have a file with Python instructions:
+
+`hello.py `
+
+<img src="/introduction/hi.png" width="50%">
+
+you run the script by giving it as a command-line argument to the python
+interpreter
+
+~~~
+$ python hello.py
+Hello world
+Goodbye
+~~~
 
 ---
 
@@ -152,25 +186,97 @@ $ jupyter notebook
 
 ---
 
+# Language fundamentals
 
-## Python types
+## Python names
 
-Values in Python have a type
-A type determines the range of possible values and operations that can be
-performed
+* Names in Python are what most languages refer to as variables, or variable names
+* To save the value of an object a name can be assigned to it
+* The assignment operator is `=`
+* Assignment is to bind a name to an object
 
-###  Numerical
+~~~
+>>> x = 8 * 9
+
+~~~
+
+1. The right-hand side is evaluated
+1. An `int` object with value 72 is created in memory
+1. An association is created with this object and the name `x`
+
+<pre style='background-color:#fbf1c7;'>
+                ┏━━┓
+                ┃ x┃
+    ┌─┐   ┌─┐   ┡━━┩ 
+    │8│ * │9│ → │72│
+    └─┘   └─┘   └──┘
+</pre> 
+---
+
+* The name can be used in other expressions as an alias for that value
+
+~~~
+>>> print(x + x)
+144
+
+~~~
+
+---
+
+## Python values and types
+
+Objects and expressions in Python have a value of some type.
+A type determines the range of possible values and operations that are defined
+for objects of that type.
+
+
+###  Numerical types
 
 * whole numbers (`int`): e.g. `-1, 7, 2000`
 * decimal numbers (`float`): `3.14, 1.0 -7.25`
 * complex numbers (`complex`): `1j, 7+5j`
 * logical (`bool`): `True`, `False`
 
+
+### Numerical operations
+* `+` Addition
+* `-` Subtraction
+* `*` Multiplication
+* `/` Division (`7 / 2 → 3.5`)
+* `//` Integer floor division (`7 // 2 → 3`)
+* `%` Integer modulus (remainder) (`7 % 2 → 1`)
+
 ---
 
-###  String: `str`
+### Logical operations
+* `and` 
+    - `True and True` → `True`
+    - `True and False` → `False`
+    - `False and False` → `False`
+* `or` 
+    - `True or True` → `True`
+    - `True or False` → `True`
+    - `False or False` → `False`
+* `not` 
+    - `not True` → `False`
+    - `not False` → `True`
 
-- sequence of characters
+* equality
+    - `1 == 1` → `True`
+    - `1 == 1.0` → `True`
+    - `1 != 1` → `False`
+---
+* identity
+    - `1 is 1` → `True`
+    - `1 is 1.0` → `False`
+* relational
+    - `1 < 1` → `False`
+    - `1 >= 1.0` → `True`
+---
+
+###  Strings: `str`
+
+- a string is a sequence of characters [(unicode)](https://home.unicode.org/)
 - literal strings are written within quotation marks
 - single `'` and double `"` quotation marks have the same status
 - three quotation marks limit strings that can span several lines
@@ -181,14 +287,11 @@ performed
 It's time
 
 ~~~
-
-
 ~~~
 >>> print('Our boss is "nice". 😀')
 Our boss is "nice". 😀
 
 ~~~
-
 ~~~
 >>> print("""Hello
 ... world""")
@@ -199,30 +302,50 @@ world
 
 ---
 
-## Variables
+### String operations
 
-* To save the value of an object it is assigned to a *variable*
-* The assignment operator is `=`
-* Assignment is to bind a name to an object
-* Python has so called free typing 
+* Concatenation
 
-### Example
 ~~~
->>> x = 8*9
->>> print(x)
-72
+>>> 'hello' + 'world'
+'helloworld'
 
 ~~~
 
-* Right-side is evaluated
-* An `int` object with value 72 is created in memory
-* An association is created with this object and the name `x`
+* Duplication
+
+~~~
+>>> 'bye' * 2
+'byebye'
+
+~~~
+
+### Common methods
+
+~~~
+>>> 'FORTRAN'.lower()
+'fortran'
+
+~~~
+
+~~~
+>>> 'c++'.upper()
+'C++'
+
+~~~
+
+~~~
+>>> 'jo'.capitalize()
+'Jo'
+
+~~~
 
 ---
 
+
 ## Container types
 
-The most important continer types are lists, tuples and dictionaries
+The most important container types are lists, tuples and dictionaries
 
 ### Lists
 
@@ -242,7 +365,12 @@ The most important continer types are lists, tuples and dictionaries
 ~~~
 
 *Note that brackets are both used in the notation for a literal list and for
-getting a member from a list*
+getting a member from a collection (not only for lists)*
+
+~~~
+>>> a_list = [1, 'a']
+>>> a_member = a_list[0]
+~~~
 
 ---
 
@@ -438,8 +566,8 @@ Commonly used Python modules
 
 * system modules
 * needed e.g. for arguments to a script
-* `sys.argv` is a list of string arguments
-* `sys.argv[0]` is the file name
+* `sys.argv` is a list containing command-line arguments
+* The first element `sys.argv [0]` is the file name
 
 ~~~
 import sys
@@ -546,13 +674,13 @@ def print_mult_table(n):
 
 Version 6: call the function from the command line
 ~~~
+import sys
+
 def print_mult_table(n):
     for i in range(1, 11):
         print(i * n)
 
 if __name__ == "__main__":
-    
-    import sys
     print_mult_table(int(sys.argv[1]))
 ~~~
 
@@ -592,6 +720,7 @@ module imported by other programs
 ### Online tutorials
 * https://docs.python.org/3/tutorial/
 * https://realpython.com
+* https://dabeaz-course.github.io/practical-python
 
 ### Youtube
 * Variables in Python https://www.youtube.com/watch?v=_AEJHKGk9ns
