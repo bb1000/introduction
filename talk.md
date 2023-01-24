@@ -1,3 +1,4 @@
+
 <script type="text/javascript"
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
@@ -9,6 +10,7 @@ KTH
 
 ---
 layout: false
+
 
 ## What is Python
 
@@ -33,15 +35,17 @@ Python is a scripting language written by Guido van Rossum
 
 From small scripts to large applications
 <div class="row">
-<div class="col-md-6">
-<code class="hljs">
-print("Hello world!")
-</code>
- 
+
+<div class="col">
+    <code class="hljs">print("Hello world!")</code>
 </div>
-<div class="col-md-6">
- <img src="https://www.appsess.com/wp-content/uploads/2016/07/instagram-logo-150x150.png">
- <img src="https://www.appsess.com/wp-content/uploads/2017/08/youtube-logo-150x150.png">
+
+<div class="col">
+ <img class="img-fluid" src="{{ base }}/img/th-808922334.jpeg">
+</div>
+
+<div class="col">
+ <img class="img-fluid" src="{{ base }}/img/Instagram_logo_2022.svg.png">
 </div>
  
 </div>
@@ -108,7 +112,7 @@ Assuming you have a file with Python instructions:
 
 `hello.py `
 
-<img src="/introduction/hi.png" width="50%">
+<img src="{{ base }}/hi.png" width="50%">
 
 you run the script by giving it as a command-line argument to the python
 interpreter
@@ -130,7 +134,7 @@ like Microsoft Word). A text editor is good for programming if it automatically
 colors special keywords for the programming language of that file. A simple 
 editor that fulfills this is `nano`.
 
-<img src="/introduction/nano.png" height="250">
+<img src="{{ base }}/nano.png" height="250">
 
 Developers survey on 
 <a href="https://insights.stackoverflow.com/survey/2018/#development-environments-and-tools">
@@ -150,7 +154,7 @@ $ pip install mu-editor
 $ mu-editor hello.py
 ~~~
 
-<img src="/introduction/mu.png" height="350">
+<img src="{{ base }}/mu.png" height="350">
 
 ---
 
@@ -158,7 +162,7 @@ $ mu-editor hello.py
 
 * Microsoft open source project
 
-<img src="/introduction/vsc.png" height="400">
+<img src="{{ base }}/vsc.png" height="400">
 
 ---
 
@@ -166,7 +170,7 @@ $ mu-editor hello.py
 
 * Community and Professional editions from JetBrains
 
-<img src="/introduction/pycharm.png" height="400">
+<img src="{{ base }}/pycharm.png" height="400">
 
 * see https://www.jetbrains.com/student/
 
@@ -179,7 +183,7 @@ $ mu-editor hello.py
 ~~~
 $ jupyter notebook
 ~~~
-<img src='/introduction/jupyter.png' height="350" >
+<img src='{{ base }}/jupyter.png' height="350" >
 * good for exploration/experimentation/demonstration
 * not good for writing large structured programs
 

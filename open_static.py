@@ -1,16 +1,23 @@
 #!/usr/bin/env python
 
-import flask
+import pathlib
 import random
 
-root = '/home/olav/Courses/bb1000/slides/introduction'
-app = flask.Flask(__name__, static_folder=root, static_url_path='/introduction', template_folder=root)
+import flask
+
+root = pathlib.Path(__file__).parent
+app = flask.Flask(
+    __name__,
+    static_folder=root,
+    static_url_path="/introduction",
+    template_folder=root
+)
 
 
-@app.route('/')
+@app.route("/")
 def index():
-    return flask.render_template('index.html')
+    return flask.render_template("index.html")
 
 
-port = int(5000 + 5000*random.random())
+port = int(5000 + 5000 * random.random())
 app.run(debug=True, port=port)
