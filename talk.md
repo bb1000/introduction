@@ -63,93 +63,148 @@ Use cases
 * I'm an intermediate developer and may need multiple installations
 * I'm a professional looking for the latest and greatest tools
 
+~~~
+foo=bar
+~~~
+
+---
+
 ### Basic installation: miniconda
 
 * We recommend the [Miniconda distribution](https://www.anaconda.com/download/success#miniconda)
 * Download the installer for your operating system
+* Go to the Miniconda distribution <a href="https://www.anaconda.com/download/success#miniconda">download page</a>.
 
----
+<details>
+<summary>Windows</summary>
 
-#### Windows
-
-Download the installer https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
+Download the installer <a href="https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe">https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe</a>
 
 and run it. Accept all defaults
+</details>
 
-#### Mac
+<details><summary>Mac</summary>
 
-Go to the Miniconda distribution [download page](https://www.anaconda.com/download/success#miniconda).
-Note that there are hardware two versions. Your mac has either an Intel chip or Apple Silicon (M1, M2, M3). Find your version from "About this Mac" on your apple menue.
-
-You have the choice of graphical or command-line installers. Choose command-line to get the installation in your home folder.
-
+<ul>
+<li>Two hardware versions: Intel chip or Apple Silicon (M1, M2, M3).</li>
+<li>Find your version from "About this Mac" on your apple menue.</li>
+<li>You have the choice of graphical or command-line installers.</li>
+<li>Choose command-line to get the installation in your home folder.</li>
+</ul>
 Download the relevant installer and run from the command line with
-
-~~~
+<p><pre class="hljs">
 $ bash Miniconda-latest-*.sh
-~~~
+</pre></p>
+</details>
 
-#### Linux
-
+<details><summary>Linux</summary>
 Most likely only the Intel version is relevant
-
-~~~
+<p><pre class="hljs">
 $ bash Miniconda-latest-Linux-x86_64.sh
-~~~
+</pre></p>
+</details>
 
 ---
 
 ### Advanced installation: pyenv
 
-First we winstall pyenv
+A tool for managing several python versions on a computer
 
-#### Windows
+First we install pyenv
 
+<details>
+<summary>Windows</summary>
 You are probably not using Windows, but if you are, check out the pyenv-win project.
+</details>
 
-#### Mac
-
+<details>
+<summary>Mac</summary>
 Dependencies
-~~~
+
+<p>
+<hline>
+<pre class="hljs">
 $ brew update
 $ brew install pyenv
-~~~
+</pre>
 
 Post installation for your shell
 
-~~~
-$  echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-$  echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-$  echo 'eval "$(pyenv init - zsh)"' >> ~/.zshrc
-~~~
+<p>
+<hline>
+<pre class="hljs">
+$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+$ echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+$ echo 'eval "$(pyenv init - zsh)"' >> ~/.zshrc
+</pre>
+</p>
 
-#### Linux
+</details>
 
-Same same
+<details><summary>Linux</summary>
+
+<p><hline><pre class="hljs">
+$ curl -fsSL https://pyenv.run | bash
+$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+$ echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+$ echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
+</pre></p>
+</details>
 
 ---
 
 ####  Now python
 
 What versions are available?
-~~~
+
+~~~bash
 $ pyenv install --list
 Available versions:
   2.1.3
   2.2.3
   2.3.7
   ...
+
 ~~~
 
 Note that miniconda will also be in this list
 
 To install the latest Python 3.12  and to make it the default interpreter
 
-~~~
+~~~bash
 $ pyenv install 3.12
 $ pyenv global 3.12
 $ python --version
 Python 3.12.7
+~~~
+
+---
+
+### The new kid on the block: `uv`
+
+The Astral company has developed a set of tools written in rust that quickly received interest. Installation and package management is fast.
+
+#### Installing `uv`.
+
+
+<p>
+<details><summary>Mac/Linux</summary>
+<pre class="hljs">
+$ curl -LsSf https://astral.sh/uv/install.sh | sh
+</pre>
+</details>
+<details><summary>Windows</summary>
+<pre class="hljs">
+$ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+</pre>
+</details>
+</p>
+<br>
+
+#### Installing Python from `uv`
+
+~~~
+uv python install
 ~~~
 
 ---
@@ -163,14 +218,11 @@ In the CLI you type commands that the computer interprets and acts upon.
 
 * The CLI on a mac/linux is a terminal program that reads commands in the bash
 scripting language (or equivalent)
-* The CLI on windows is the console program known as CMD.
+* The CLI on windows is the console program known as CMD or Powershell.
 * The CLI prompt is a character string printed at the beginning of each line when 
   waiting for a command
 
-In these slides we use the convention
-
-* `$ `  is the bash prompt (mac/linux)
-* `C> ` is the CMD prompt (windows)
+In these slides we use the convention `$ ` (the bash prompt)
 
 Typing `python` in the CLI starts an interactive Python session accepting
 Python commands 
