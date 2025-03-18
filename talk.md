@@ -63,9 +63,6 @@ Use cases
 * I'm an intermediate developer and may need multiple installations
 * I'm a professional looking for the latest and greatest tools
 
-~~~
-foo=bar
-~~~
 
 ---
 
