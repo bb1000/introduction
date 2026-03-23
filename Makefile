@@ -1,5 +1,5 @@
 index.html: talk.md talk.css
-	python refreeze/freeze.py
+	uv run python refreeze/freeze.py
 	@cp index.html /tmp
 	@cat /tmp/index.html | sed "s;img/;/introduction/img/;" > index.html
 	vim -s script index.html
@@ -13,6 +13,6 @@ pytest:
 RANDOM_PORT=`python -c 'import random; print(int(5000+ 5000*random.random()))'`
 
 slideshow:
-	PORT=$(RANDOM_PORT) python refreeze/flask_app.py &
+	PORT=$(RANDOM_PORT) uv run python refreeze/flask_app.py &
 show:
-	python open_static.py
+	uv run python open_static.py
