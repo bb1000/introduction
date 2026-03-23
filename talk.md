@@ -1,24 +1,15 @@
-
-<script type="text/javascript"
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 # Introduction to Python
 
-## BB1000
-
-KTH
 
 ---
+<!--
 layout: false
+-->
 
 
 ## What is Python
 
-<a title="Daniel Stroud, CC BY-SA 4.0
-&lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
-href="https://commons.wikimedia.org/wiki/File:Guido-portrait-2014.jpg"><img
-width="256" alt="Guido-portrait-2014"
-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Guido-portrait-2014.jpg/512px-Guido-portrait-2014.jpg"></a>
+![guido](https://duckduckgo.com/i/2448952ab967c51f.jpg)
 
 Python is a scripting language written by Guido van Rossum 
 
@@ -65,6 +56,10 @@ Use cases
 
 
 ---
+
+### Official installation
+
+* Go to the official Python website <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> and follow instructions for your operating system
 
 ### Basic installation: miniconda
 
